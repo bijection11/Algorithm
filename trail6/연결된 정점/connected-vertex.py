@@ -13,8 +13,8 @@ def union(a, b):
     b = find(b)
 
     if a != b:
-        parent[a] = b
-        size[b] += size[a]
+        parent[b] = a
+        size[a] += size[b]
 
 def count(a):
     return size[find(a)]
