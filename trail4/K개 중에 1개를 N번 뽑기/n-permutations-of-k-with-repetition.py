@@ -1,15 +1,15 @@
 k, n = map(int, input().split())
 
-path = []
+ans = []
 
 def dfs():
-    if len(path) == n:
-        print(*path)
+    if len(ans) == n:
+        print(*ans)
         return
 
     for i in range(1, k + 1):
-        path.append(i)
+        ans.append(i)
         dfs()
-        path.pop()
+        ans.pop()
 
 dfs()
